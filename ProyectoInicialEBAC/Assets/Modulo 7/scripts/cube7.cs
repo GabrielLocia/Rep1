@@ -32,58 +32,15 @@ public class cube7 : MonoBehaviour
 
     private void FixedUpdate() {
         if(isCube){
-            GameObject temGameObject = Instantiate<GameObject>(PrefabCubo);
+            // GameObject temGameObject = Instantiate<GameObject>(PrefabCubo);
             Color c = new Color(255, 255, 255);
             PrefabCubo.GetComponent<MeshRenderer>().material.color = c;
-
-            listaDeCubos.Add(temGameObject);
-            List<GameObject> objetosParaEliminar = new List<GameObject>();
-            temGameObject.transform.position = Random.insideUnitSphere;
-            foreach (GameObject go in listaDeCubos)
-            {
-                float scale = go.transform.localScale.x;
-                scale *= factorDeEscalamiento;
-                go.transform.localScale = Vector3.one * scale;
-
-                if (scale <= 0.1)
-                {
-                    objetosParaEliminar.Add(go);
-                }
-            }
-
-            foreach (GameObject go in objetosParaEliminar)
-            {
-                listaDeCubos.Remove(go);
-                Destroy(go);
-            }
             isCube = false;
-
         }else{
 
-            GameObject temGameObject = Instantiate<GameObject>(PrefabCubo);
+            // GameObject temGameObject = Instantiate<GameObject>(PrefabCubo);
             Color c = new Color(0, 0, 0);
-            PrefabCubo.GetComponent<MeshRenderer>().material.color = c;
-            listaDeCubos.Add(temGameObject);
-            List<GameObject> objetosParaEliminar = new List<GameObject>();
-            temGameObject.transform.position = Random.insideUnitSphere;
-            foreach (GameObject go in listaDeCubos)
-            {
-                float scale = go.transform.localScale.x;
-                scale *= factorDeEscalamiento;
-                go.transform.localScale = Vector3.one * scale;
-
-                if (scale <= 0.1)
-                {
-                    objetosParaEliminar.Add(go);
-                }
-            }
-
-            foreach (GameObject go in objetosParaEliminar)
-            {
-                listaDeCubos.Remove(go);
-                Destroy(go);
-            }
-           
+            PrefabCubo.GetComponent<MeshRenderer>().material.color = c;           
             isCube = true;
         }
             // Thread.Sleep(mydelay);

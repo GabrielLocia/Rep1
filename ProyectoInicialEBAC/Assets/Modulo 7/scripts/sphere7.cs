@@ -10,6 +10,7 @@ public class sphere7 : MonoBehaviour
     public float factorDeEscalamiento;
     bool isCube = cube7.isCube;
     bool isCabsule = capsule7.isCabsule;
+    public static bool isSphere = false;
     void Start()
     {
 
@@ -24,61 +25,21 @@ public class sphere7 : MonoBehaviour
     private void FixedUpdate() {
         if (isCabsule && isCube)
         {
-            GameObject temGameObject = Instantiate<GameObject>(PrefabEsfera);
+            // GameObject temGameObject = Instantiate<GameObject>(PrefabEsfera);
             Color c = new Color(255, 255, 255);
             PrefabEsfera.GetComponent<MeshRenderer>().material.color = c;
-
-            listaDeCubos.Add(temGameObject);
-            List<GameObject> objetosParaEliminar = new List<GameObject>();
-            temGameObject.transform.position = Random.insideUnitSphere;
-            foreach (GameObject go in listaDeCubos)
-            {
-                float scale = go.transform.localScale.x;
-                scale *= factorDeEscalamiento;
-                go.transform.localScale = Vector3.one * scale;
-
-                if (scale <= 0.1)
-                {
-                    objetosParaEliminar.Add(go);
-                }
-            }
-
-            foreach (GameObject go in objetosParaEliminar)
-            {
-                listaDeCubos.Remove(go);
-                Destroy(go);
-            }
             isCabsule = false;
+            isSphere = false;
 
         }
         else
         {
 
-            GameObject temGameObject = Instantiate<GameObject>(PrefabEsfera);
+            // GameObject temGameObject = Instantiate<GameObject>(PrefabEsfera);
             Color c = new Color(0, 0, 0);
             PrefabEsfera.GetComponent<MeshRenderer>().material.color = c;
-            listaDeCubos.Add(temGameObject);
-            List<GameObject> objetosParaEliminar = new List<GameObject>();
-            temGameObject.transform.position = Random.insideUnitSphere;
-            foreach (GameObject go in listaDeCubos)
-            {
-                float scale = go.transform.localScale.x;
-                scale *= factorDeEscalamiento;
-                go.transform.localScale = Vector3.one * scale;
-
-                if (scale <= 0.1)
-                {
-                    objetosParaEliminar.Add(go);
-                }
-            }
-
-            foreach (GameObject go in objetosParaEliminar)
-            {
-                listaDeCubos.Remove(go);
-                Destroy(go);
-            }
-
             isCabsule = true;
+            isSphere = true;
         }
     }
 }
