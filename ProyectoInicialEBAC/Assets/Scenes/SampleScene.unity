@@ -474,6 +474,7 @@ GameObject:
   - component: {fileID: 1921988256}
   - component: {fileID: 1921988258}
   - component: {fileID: 1921988259}
+  - component: {fileID: 1921988260}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -666,7 +667,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921988243}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 330ad3be82f561b48b92d89174784f40, type: 3}
   m_Name: 
@@ -681,7 +682,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921988243}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24c23ded99c5bc24f8acda9db3aac0db, type: 3}
   m_Name: 
@@ -696,7 +697,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921988243}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11777e926fb0b5e4495a9dab5c98ede6, type: 3}
   m_Name: 
@@ -711,7 +712,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921988243}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47e2d32c95e03074f9da76035eefa254, type: 3}
   m_Name: 
@@ -726,7 +727,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921988243}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9578dcf09923b6e4e933a249b245cc73, type: 3}
   m_Name: 
@@ -734,6 +735,20 @@ MonoBehaviour:
   PrefabEsfera: {fileID: 892529292}
   listaDeCubos: []
   factorDeEscalamiento: 0.99
+--- !u!114 &1921988260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921988243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c117647d7fd622d468494fdb26cdd5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PrefabCubo: {fileID: 2592984763682674711}
+  PrefabEsfera: {fileID: 1724690428}
 --- !u!1001 &2574792914584814790
 PrefabInstance:
   m_ObjectHideFlags: 0
